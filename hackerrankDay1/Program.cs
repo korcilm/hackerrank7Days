@@ -16,9 +16,11 @@ namespace hackerrankDay1
 {
     class Program
     {
-        /*
-         *Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
-         
+        /// <summary>
+        /// Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with  places after the decimal.
+        /// </summary>
+        #region plusMinus
+        /*                 
         public static void plusMinus(List<int> arr)
         {
             double positive = 0, negative = 0, notr = 0;
@@ -45,15 +47,48 @@ namespace hackerrankDay1
 
         }
         */
+        #endregion
+        /// <summary>
+        /// Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+        /// </summary>
+        #region miniMaxSum
+        /*
+        public static void miniMaxSum(List<int> arr)
+        {
+            long total = 0;
+            foreach (var item in arr)
+            {
+                total += item;
+            }
+            long temp = 0;
+            long smallestNumber =long.MaxValue, biggestNumber=long.MinValue;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                temp = total - arr[i];
+                if (temp<smallestNumber)
+                {
+                    smallestNumber = temp;
+                }
+                if (temp>biggestNumber)
+                {
+                    biggestNumber = temp;
+                }
+                temp = 0;
+            }
+            Console.WriteLine($"{smallestNumber} {biggestNumber}" );
+        }
+         */
+        #endregion
+
     }
     class Solution
     {
         public static void Main(string[] args)
         {
-           
-            List<int> arr = new List<int> { -4, 3, -9, 0, 4, 1 };           
 
+            List<int> arr = new List<int> { 942381765, 627450398 ,954173620 ,583762094, 236817490 };
             //Program.plusMinus(arr);
+            //Program.miniMaxSum(arr);
         }
     }
 
