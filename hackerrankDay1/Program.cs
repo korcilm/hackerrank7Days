@@ -128,6 +128,23 @@ namespace hackerrankDay1
         }
         #endregion
 
+        /// <summary>
+        ///  findMedian mock test
+        /// </summary>
+        public static int findMedian(List<int> arr)
+        {
+            int result;
+            arr.Sort();
+            if (arr.Count%2==0)
+            {
+                result = arr[(arr.Count / 2) + 1];
+            }
+            else
+            {
+                result = (arr[((arr.Count / 2) + 1)] + arr[((arr.Count / 2))])/2;
+            }
+            return result;
+        }
     }
     class Solution
     {
@@ -140,8 +157,8 @@ namespace hackerrankDay1
 
             string s = "12:05:45PM";
             string result = Program.timeConversion(s);
-
-           
+            List<int> arr = new List<int> { 0, 4, 2, 3, 1, 5, 7 };
+            int result2 = Program.findMedian(arr);
         }
     }
 
